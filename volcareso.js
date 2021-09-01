@@ -1,5 +1,5 @@
 "use strict";
-const hash = (sel, option) => {
+const $$ = (sel, option) => {
 
   if (option == 1) {
     return document.querySelector(sel);
