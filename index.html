@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>HASH.JS -A jQuery like javascript library</title>
+</head>
+<style>
+    body,
+    html {
+        font-family: 'Courier New', Courier, monospace;
+        background: rgb(255, 248, 248);
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+    }
+
+    nav>a {
+        padding: 10px 10px 10px 10px;
+        background: #000;
+        color: #fff;
+    }
+
+    nav>a:hover {
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .card {
+        min-height: 300px;
+        max-width: 90%;
+        border-radius: 15px;
+        padding: 20px 20px 20px 20px;
+        box-shadow: 5px 5px 5px grey;
+    }
+
+    .container {
+        align-items: center;
+    }
+
+    .pad {
+        padding-left: 20px;
+    }
+    .footer{
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.521);
+        color: rgb(255, 234, 234);
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div class="display-1 text-center">
+        HASH.JS
+    </div>
+    <div class="container">
+        <div class="card" id="import">
+            <h3>
+                IMPORT:
+            </h3>
+            <h5>
+                <code>
+                    &lt;script src="https://siliconduct.github.io/hash.js/hashtag_1.0.1.js">&lt;/script>
+                </code>
+            </h5>
+            <h6>
+                THATS IT! THE POWER IN YOUR HANDS NOW!
+            </h6>
+        </div>
+        <br>
+        <div class="card" id="selection">
+            <h3>
+                SELECTION:
+            </h3>
+            <h5>
+                <code>
+                    hash('selected element').action();
+                    <div class="text-muted">
+                        // selected element means => .by_class | #by_id | by_tageName
+                    </div>
+                </code>
+            </h5>
+
+            <br>
+            <h3>
+                DEMO:
+            </h3>
+            <h5>
+                <code>
+                    hash('body').hide();
+                </code>
+            </h5>
+        </div>
+        <br>
+        <div class="card" id="eventListener">
+            <h3>
+                ADD AN EVENT LISTENER:
+            </h3>
+            <h6>
+                SHH! LISTEN
+            </h6>
+            <h5>
+                <code>
+                    hash('element').on('eventName', function(){<br>
+                        <span class="pad">alert('i have ears!'); </span><br>
+                    })
+                </code>
+            </h5>
+        </div>
+        <br>
+        <div class="card" id="appenPrepend">
+            <h3>
+                APPEND OR PREPEND STUFF:
+            </h3>
+            <h6>
+                [alignment <span style="color: rgb(255, 0, 0);">error</span>]
+            </h6>
+            <br>
+            <h5>
+                APPEND:
+                <br>
+                <code>
+                    hash('element').append('appendedText');
+                </code>
+            </h5>
+            <br>
+            <h5>
+                PREPEND:
+                <br>
+                <code>
+                    hash('element').prepend('prependedText')
+                </code>
+            </h5>
+        </div>
+        <br>
+        <div class="card" id="attributes">
+            <h3>
+                ATTRIBUTES:
+            </h3>
+            <h6>
+                i see your properties!
+            </h6>
+            <br>
+            <h5>
+                <code>
+                    hash('element').attr('class')
+                </code>
+                <div class="text-muted">
+                    // returns body (or the class specified)
+                </div>
+                <br>
+                <code>
+                    hash('element').attr('class', 'foo_bar')
+                </code>
+                <div class="text-muted">
+                    // sets properties to values
+                </div>
+            </h5>
+        </div>
+        <br>
+        <div class="card" id="css">
+            <h3>
+                CHANGING CSS:
+            </h3>
+            <h6>
+                SEE THE STYLE!
+            </h6>
+            <br>
+            <h5>
+                <code>
+                    hash('element').css(propertie, value)
+                </code>
+                <br>
+                EX:
+                <br>
+                <code>
+                    hash('element').css('text-align', 'center')
+                </code>
+            </h5>
+        </div>
+        <br>
+        <div class="card" id="ajax">
+            <h3>
+                AJAX:
+            </h3>
+            <h6>
+                A DEV'S DREAM!
+            </h6>
+            <br>
+            <h5>
+                LOAD REMOTE FILE CONTENT:
+                <br>
+                <code>
+                    hash("element").ajax("https://url-to-file.com/TXT.txt", "get")
+                </code>
+                <div class="text-muted">
+                    // sets the innerHTML value to the remote file value (changed the text)
+                </div>
+            </h5>
+        </div>
+        <br>
+        <div class="card">
+            <h3>
+                COOKIES:
+            </h3>
+            <h6>
+                COOKIES ARE CRAZIES!
+            </h6>
+            <br>
+            <h5>
+                SET COOKIE:
+                <br>
+                <code>
+                    hash().setCookie("username", "hashtag", "session", "/"); //key, value, expires, path
+                </code>
+            </h5>
+            <br>
+            <h5>
+                GET COOKIES:
+                <br>
+                <code>
+                    hash().getCookie("username");
+                </code>
+                <div class="text-muted">
+                    //returns "hashtag"
+                </div>
+            </h5>
+        </div>
+        <br>
+        <div class="card">
+            <h3>
+                ADD ELEMENT:
+            </h3>
+            <h6>
+                more elements, yaay!
+            </h6>
+            <br>
+            <h5>
+                <code>
+                    hash('elementToAppendTo').addElm('p', 'idAssigned')
+                    <br>
+                    <div class="text-muted">
+                        // element added
+                    </div>
+                </code>
+                <br>
+                <br>
+                ACCESS USING:
+                <br>
+                <code>
+                    hash('#idAssigned').action();
+                </code>
+            </h5>
+        </div>
+        <br>
+        <div class="card">
+            <h3>
+                LOCAL STORAGE:
+            </h3>
+            <h6>
+                NICE!
+            </h6>
+            <br>
+            <h5>
+                <code>
+                    hash().storage(action, key, value)
+                </code>
+                <div class="text-muted pad">
+                    <br>
+                    // action list:
+                    <br>
+                    // "clear" clears the local storage
+                    <br>
+                    // "get". Gets the iten with specified key
+                    <br>
+                    // "set" set the key with the respective value
+                    <br>
+                    // "remove" remove the item with the specified key
+                </div>
+            </h5>
+        </div>
+        <br>
+        <div class="card">
+            <h3>
+                TOOGLE HIDE AND SHOW:
+            </h3>
+            <h6>
+                now you see me now you dont
+            </h6>
+            <br>
+            <h5>
+                <code>
+                    hash(".element").toogle();
+                </code>
+            </h5>
+        </div>
+        <br>
+        <div class="card">
+            <h3>
+                READ MESSAGES AND TEXT IN ELEMENTS:
+            </h3>
+            <h6>
+                BLEEP BLOP BLEEP!
+            </h6>
+            <br>
+            <h5>
+                <code>
+                    hash().read("message");
+                </code>
+                <h4>
+                    OR READ THE TEXT INSIDE AN ELEMENT
+                </h4>
+                <br>
+                <code>
+                    hash('body').read();
+                </code>
+            </h5>
+            <br>
+            <h6 class="mark">
+                NOTE: THE ELEMENT SHOULDNT HAVE SOME HTML CODE ELSE THAT WOULS BE ALSO READ!
+            </h6>
+        </div>
+        <br>
+        <div class="card">
+            <h3>
+                DATA COLLECTION (BASIC):
+            </h3>
+            <h6>
+                DATA IS DATA
+            </h6>
+            <br>
+            <h5>
+                <code>
+                    hash().data <br>
+
+                    <div class="text-muted pad">
+
+           .lang //en_US <br>
+           <br>.userAgent //Mozilla/5.0 (Linux; Android 6.0.1; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Mobile Safari/537.36"
+           <br>.os //linux x86_64
+           <br>.cookies // true
+           <br>.vender //Google.inc
+           <br>.online // true id online
+           <br>.version //5.0
+           <br>.mobileType //4g
+           <br>.doNotTrack //true is turned on                        
+                    </div>
+                    <br>
+                    <h5>
+                        hash().data //returns all data in a json format
+                    </h5>
+                </code>
+            </h5>
+        </div>
+        <br>
+        <div class="card">
+            <h3>
+                FINGERPRINTING (KIND OF):
+            </h3>
+            <h6>
+                GOT YA!
+            </h6>
+            <br>
+            <h5>
+                <code>
+                    hash().fingerprint(key); <span class="text-muted">//sets the fingetprint on the user machine</span><br>
+                    hash().checkFingerprint(key); <span class="text-muted">// trturns true id the fingerprints are matched (else false)</span><br>
+                    <br>
+                    //example <br><br>
+                    if (hash().checkFingerprint('user1')) {<br>
+                        <span class="pad">console.log('not a new user');</span><br>
+                    }else{<br>
+                        <span class="pad">console.log('new user');</span><br>
+                    } <br><br>
+                    hash().fingerprint('user1'); <br>
+                </code>
+            </h5>
+        </div>
+        <br>
+        <div class="card">
+            <h3>
+                REUSABLE COMPONENTS:
+            </h3>
+            <h6>
+                RECYCLE THEM !
+            </h6>
+            <br>
+            <h5>
+                MAKE A COMPONENT:
+                <br>
+                <code>
+                    hash().recycle('custom-element', 'HTML MARKUP ALLOWED HERE!')
+                    <br>
+                </code>
+                <br>
+                NOW WHEN YOU DECLARE &lt;custom-element>&lt;/custom-element> <br>
+                IT WILL POPULATE WITH THE HTML MARKUP GIVEN IN THE SECOND SECTION
+                <br>
+                <br>
+                THIS WAY, YOU CAN REUSE THIS CODE FROM A SINGLE FILE 
+            </h5>
+        </div>
+    </div>
+    <br>
+    <div class="h4 text-center footer">
+        AND THIS IS NOT IT
+        <br>
+        MANY MORE THINGS ON THEIR WAY!
+    </div>
+</body>
+
+</html>
