@@ -1,18 +1,3 @@
-//-------------------------------------------
-//-------------------------------------------
-
-// (C) SILICONDUCT 2021
-// APACHE LICENCE 2.0
-
-// HASHTAG_1.0.1.JS (UNCOMPRESSED VERSION)
-// SIZE : 6KB APPROX
-// CONTRIBUTORS:
-//       -> RAGHAV9OFFICIAL
-
-
-//-------------------------------------------
-//-------------------------------------------
-
 "use strict";
 const hash = (sel, option) => {
 
