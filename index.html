@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <title>HASH.JS -A jQuery like javascript library</title>
+    <title>VOLCARESO.JS -A jQuery like javascript library</title>
 </head>
 <style>
     body,
@@ -60,7 +60,7 @@
 
 <body>
     <div class="display-1 text-center">
-        HASH.JS
+        VOLCARESO.JS
     </div>
     <div class="container">
         <div class="card" id="import">
@@ -69,7 +69,7 @@
             </h3>
             <h5>
                 <code>
-                    &lt;script src="https://siliconduct.github.io/hash.js/hashtag_1.0.1.js">&lt;/script>
+                    &lt;script src="https://siliconduct.github.io/volcareso.js/volcareso.js">&lt;/script>
                 </code>
             </h5>
             <h6>
@@ -83,7 +83,7 @@
             </h3>
             <h5>
                 <code>
-                    hash('selected element').action();
+                    $$('selected element').action();
                     <div class="text-muted">
                         // selected element means => .by_class | #by_id | by_tageName
                     </div>
@@ -96,7 +96,7 @@
             </h3>
             <h5>
                 <code>
-                    hash('body').hide();
+                    $$('body').hide();
                 </code>
             </h5>
         </div>
@@ -110,7 +110,7 @@
             </h6>
             <h5>
                 <code>
-                    hash('element').on('eventName', function(){<br>
+                    $$('element').on('eventName', function(){<br>
                         <span class="pad">alert('i have ears!'); </span><br>
                     })
                 </code>
@@ -129,7 +129,7 @@
                 APPEND:
                 <br>
                 <code>
-                    hash('element').append('appendedText');
+                    $$('element').append('appendedText');
                 </code>
             </h5>
             <br>
@@ -137,7 +137,7 @@
                 PREPEND:
                 <br>
                 <code>
-                    hash('element').prepend('prependedText')
+                    $$('element').prepend('prependedText')
                 </code>
             </h5>
         </div>
@@ -152,14 +152,14 @@
             <br>
             <h5>
                 <code>
-                    hash('element').attr('class')
+                    $$('element').attr('class')
                 </code>
                 <div class="text-muted">
                     // returns body (or the class specified)
                 </div>
                 <br>
                 <code>
-                    hash('element').attr('class', 'foo_bar')
+                    $$('element').attr('class', 'foo_bar')
                 </code>
                 <div class="text-muted">
                     // sets properties to values
@@ -177,13 +177,13 @@
             <br>
             <h5>
                 <code>
-                    hash('element').css(propertie, value)
+                    $$('element').css(propertie, value)
                 </code>
                 <br>
                 EX:
                 <br>
                 <code>
-                    hash('element').css('text-align', 'center')
+                    $$('element').css('text-align', 'center')
                 </code>
             </h5>
         </div>
@@ -200,7 +200,7 @@
                 LOAD REMOTE FILE CONTENT:
                 <br>
                 <code>
-                    hash("element").ajax("https://url-to-file.com/TXT.txt", "get")
+                    $$("element").ajax("https://url-to-file.com/TXT.txt", "get")
                 </code>
                 <div class="text-muted">
                     // sets the innerHTML value to the remote file value (changed the text)
@@ -220,7 +220,7 @@
                 SET COOKIE:
                 <br>
                 <code>
-                    hash().setCookie("username", "hashtag", "session", "/"); //key, value, expires, path
+                    $$().setCookie("username", "hashtag", "session", "/"); //key, value, expires, path
                 </code>
             </h5>
             <br>
@@ -228,7 +228,7 @@
                 GET COOKIES:
                 <br>
                 <code>
-                    hash().getCookie("username");
+                    $$().getCookie("username");
                 </code>
                 <div class="text-muted">
                     //returns "hashtag"
@@ -246,7 +246,7 @@
             <br>
             <h5>
                 <code>
-                    hash('elementToAppendTo').addElm('p', 'idAssigned')
+                    $$('elementToAppendTo').addElm('p', 'idAssigned')
                     <br>
                     <div class="text-muted">
                         // element added
@@ -257,7 +257,7 @@
                 ACCESS USING:
                 <br>
                 <code>
-                    hash('#idAssigned').action();
+                    $$('#idAssigned').action();
                 </code>
             </h5>
         </div>
@@ -272,7 +272,7 @@
             <br>
             <h5>
                 <code>
-                    hash().storage(action, key, value)
+                    $$().storage(action, key, value)
                 </code>
                 <div class="text-muted pad">
                     <br>
@@ -299,7 +299,7 @@
             <br>
             <h5>
                 <code>
-                    hash(".element").toogle();
+                    $$(".element").toogle();
                 </code>
             </h5>
         </div>
@@ -314,14 +314,14 @@
             <br>
             <h5>
                 <code>
-                    hash().read("message");
+                    $$().read("message");
                 </code>
                 <h4>
                     OR READ THE TEXT INSIDE AN ELEMENT
                 </h4>
                 <br>
                 <code>
-                    hash('body').read();
+                    $$('body').read();
                 </code>
             </h5>
             <br>
@@ -340,7 +340,7 @@
             <br>
             <h5>
                 <code>
-                    hash().data <br>
+                    $$().data <br>
 
                     <div class="text-muted pad">
 
@@ -356,7 +356,7 @@
                     </div>
                     <br>
                     <h5>
-                        hash().data //returns all data in a json format
+                        $$().data //returns all data in a json format
                     </h5>
                 </code>
             </h5>
@@ -372,16 +372,16 @@
             <br>
             <h5>
                 <code>
-                    hash().fingerprint(key); <span class="text-muted">//sets the fingetprint on the user machine</span><br>
-                    hash().checkFingerprint(key); <span class="text-muted">// trturns true id the fingerprints are matched (else false)</span><br>
+                    $$().fingerprint(key); <span class="text-muted">//sets the fingetprint on the user machine</span><br>
+                    $$().checkFingerprint(key); <span class="text-muted">// trturns true id the fingerprints are matched (else false)</span><br>
                     <br>
                     //example <br><br>
-                    if (hash().checkFingerprint('user1')) {<br>
+                    if ($$().checkFingerprint('user1')) {<br>
                         <span class="pad">console.log('not a new user');</span><br>
                     }else{<br>
                         <span class="pad">console.log('new user');</span><br>
                     } <br><br>
-                    hash().fingerprint('user1'); <br>
+                    $$().fingerprint('user1'); <br>
                 </code>
             </h5>
         </div>
@@ -398,7 +398,7 @@
                 MAKE A COMPONENT:
                 <br>
                 <code>
-                    hash().recycle('custom-element', 'HTML MARKUP ALLOWED HERE!')
+                    $$().recycle('custom-element', 'HTML MARKUP ALLOWED HERE!')
                     <br>
                 </code>
                 <br>
