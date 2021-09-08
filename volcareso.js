@@ -194,7 +194,6 @@ const $$ = (sel, option) => {
             this.innerHTML = code;
         }
     }
-
     customElements.define(name, Header);
     }
 
@@ -204,4 +203,33 @@ const $$ = (sel, option) => {
 
   };
   return self;
+}
+
+class react{
+  constructor(config) {
+    this.el = document.querySelector(config.el);
+    this.data = config.data;
+  }
+}
+function render(react) {
+  const { data, el } = react;
+  const { innerHTML } = el;
+  
+  react.el.innerHTML = innerHTML.replace(/\{\{((?:.|\r?\n)+?)\}\}/g, (_, val) => data[val.trim()]
+  );
+}
+function defineReactive(obj) {
+    for (const key in obj) {
+        let value = obj[key];
+        Object.defineProperty(obj, key, {
+            get() {
+                return value;
+            },
+            set(newValue) {
+                if (value === newValue) return;
+                value = newValue;
+                console.log(key, "updated");
+            }
+        })
+    }
 }
