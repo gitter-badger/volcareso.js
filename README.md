@@ -169,4 +169,5 @@ new react({
 })
 
 // replaces {{ hello }} with world in element body
+// inspired from vue.js
 ```
