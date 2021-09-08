@@ -153,10 +153,10 @@ $$().fingerprint('user1');
 $$().recycle('custom-element', '<p>an element </p>')
 ```
 
-NOW WHEN YOU DECLARE `<custom-element></custom-element>`
-IT WILL POPULATE WITH THE HTML MARKUP GIVEN IN THE SECOND SECTION
+Now when we will decrare `<custom-element></custom-element>` anywhere in the document, 
+It will populate with the `html` markup given in the second sector
 
-THIS WAY, YOU CAN REUSE THIS CODE FROM A SINGLE FILE
+This way you can reuse the same code again
 
 
 ## REACTIVE DATA
