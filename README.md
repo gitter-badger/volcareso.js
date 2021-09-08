@@ -157,3 +157,16 @@ NOW WHEN YOU DECLARE `<custom-element></custom-element>`
 IT WILL POPULATE WITH THE HTML MARKUP GIVEN IN THE SECOND SECTION
 
 THIS WAY, YOU CAN REUSE THIS CODE FROM A SINGLE FILE
+
+
+## REACTIVE DATA
+``` javascript
+new react({
+  el: 'body', 
+  data: {
+    hello: 'world'
+  }
+})
+
+// replaces {{ hello }} with world in element body
+```
