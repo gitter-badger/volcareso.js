@@ -1,4 +1,7 @@
 # [volcareso.js](https://volcareso.github.io/volcareso.js/)
+
+[![Join the chat at https://gitter.im/volcareso-js/community](https://badges.gitter.im/volcareso-js/community.svg)](https://gitter.im/volcareso-js/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A multi talented Javascript library
 ## IMPORT:
 ``` html
